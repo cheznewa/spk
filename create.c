@@ -66,7 +66,7 @@ short create_spk_ex(char *outfile, int inlen, char *in[], bool verbose, bool no_
         fh->uid = 0xffff;
         fh->gid = 0xffff;
 #endif
-        printf("%s\n", in[i]);
+        if(verbose) printf("%s\n", in[i]);
         if(s.st_mode & S_IFDIR)
         { // Directory
            memset(fh->name, 0, 255);
